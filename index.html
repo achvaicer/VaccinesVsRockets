@@ -6,22 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <title>Hello, world!</title>
+    <title>How many vaccines could be bought on Gaza Strip instead of rockets?</title>
+
+    <!-- Social media stuff -->
+    <meta name="description" content="How many vaccines could be bought on Gaza Strip?" />
+    <link rel="canonical" href="http://vacxrockt.com/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <meta property="og:site_name" content="Vaccines Vs Rockets" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vaccines Vs Rockets" />
+    <meta property="og:description" content="How many vaccines could be bought on Gaza Strip instead of rockets?" />
+    <meta property="og:url" content="https://vacxrockt.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Vaccines Vs Rockets" />
+    <meta name="twitter:description" content="How many vaccines could be bought on Gaza Strip instead of rockets?" />
+    <meta name="twitter:url" content="https://vacxrockt.com/" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <main>
+        <div class="container">
 
-    <!-- Optional JavaScript; choose one of the two! -->
+            <div clas="row">
+                <div class="px-4 py-5 my-5 text-center">
+                    <p class="h1">Since May 10<sup>th</sup> were fired over <span id="rockets"></span><sub><small class="h6">[1]</small></sub> rockets from Gaza into Israel.</p>
+                    
+                    <p class="h1">How many vaccines could be bought instead?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mx-auto px-4 col-xs-4">
+                    <table class="table table-hover " id="table">
+                        
+                    </table>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="text-end py-5">
+                    <span class="float-right">Share</span>
+                    <a title="WhatsApp" aria-label="Twitter" class="" href="whatsapp://send?text=http://vacxrockt.com">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a title="Twitter" aria-label="Twitter" class="" href="https://twitter.com/share?text=Vaccines+Vs+Rockets&amp;url=http://vacxrockt.com" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <i class="bi bi-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a title="Facebook" aria-label="Facebook" class="" href="https://www.facebook.com/sharer/sharer.php?u=http://vacxrockt.com" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a title="LinkedIn" aria-label="LinkedIn" class="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://vacxrockt.com&amp;title=Vaccines vs Rocket" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            
+                <div class="card border-secundary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">References</div>
+                    <div class="card-body">
+                        <p><small><a href="https://en.wikipedia.org/wiki/2021_Israel–Palestine_crisis">[1] 2021 Israel-Palestine crisis - Wikipedia</a></small></p>
+                        <p><small><a href="https://en.wikipedia.org/wiki/Qassam_rocket">[2] Cost of Qassam Rocket is $800</a></small></p>
+                    </div>
+                  </div>
+                </div>
+        
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script language="javascript">
+        var rockets = 1500;
+        var qassamPrice = 800;
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        var vaccines = 
+            [
+                { "Brand": "Pfizer", "Price": 19.50 },
+                { "Brand": "Novavax", "Price": 16 },
+                { "Brand": "Moderna", "Price": 25 },
+                { "Brand": "Johnson & Johnson", "Price": 10 },
+                { "Brand": "AstraZeneca", "Price": 3 }
+            ];
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
-    -->
+        document.getElementById("rockets").innerHTML = rockets;
+
+        var table = document.getElementById("table");
+        for(var i=0; i < vaccines.length; i++)
+        {
+            table.innerHTML += "<tr><td>" + vaccines[i].Brand + "</td><td><span class='px-3 text-danger'><strong>" + (Math.round(rockets * qassamPrice / vaccines[i].Price)).toLocaleString()  + "</strong></span> doses</td><td><span class='px-3 text-danger'><strong>"+vaccines[i].Price+"</strong></span> per dose</td></tr>"; 
+        }
+
+    </script>
   </body>
 </html>
