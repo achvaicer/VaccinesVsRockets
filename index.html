@@ -32,9 +32,9 @@
 
             <div clas="row">
                 <div class="px-4 py-5 my-5 text-center">
-                    <p class="h1">Since May 10<sup>th</sup> were fired over <span id="rockets"></span><sub><small class="h6">[1]</small></sub> rockets from Gaza into Israel.</p>
+                    <p class="h2">Since May 10<sup>th</sup> were fired over <span id="rockets"></span><sub><small class="h6"><a href="#reference-1">[1]</a></small></sub> rockets from Gaza into Israel.</p>
                     
-                    <p class="h1">How many vaccines could be bought instead?</p>
+                    <p class="h2">How many vaccines could be bought instead?</p>
                 </div>
             </div>
             <div class="row">
@@ -46,18 +46,18 @@
             </div>
         
             <div class="row">
-                <div class="text-end py-5">
+                <div class="text-end py-5 h3">
                     <span class="float-right">Share</span>
-                    <a title="WhatsApp" aria-label="Twitter" class="" href="whatsapp://send?text=http://vacxrockt.com">
+                    <a title="WhatsApp" aria-label="WhatsApp" class="" href="whatsapp://send?text=http://vacxrockt.com">
                         <i class="bi bi-whatsapp" aria-hidden="true"></i>
                     </a>
-                    <a title="Twitter" aria-label="Twitter" class="" href="https://twitter.com/share?text=Vaccines+Vs+Rockets&amp;url=http://vacxrockt.com" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a title="Twitter" aria-label="Twitter" class="" href="https://twitter.com/share?text=How%20many%20vaccines%20could%20be%20bought%20on%20Gaza%20Strip%20instead%20of%20rockets%3F&amp;url=http://vacxrockt.com" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                         <i class="bi bi-twitter" aria-hidden="true"></i>
                     </a>
                     <a title="Facebook" aria-label="Facebook" class="" href="https://www.facebook.com/sharer/sharer.php?u=http://vacxrockt.com" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                         <i class="bi bi-facebook" aria-hidden="true"></i>
                     </a>
-                    <a title="LinkedIn" aria-label="LinkedIn" class="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://vacxrockt.com&amp;title=Vaccines vs Rocket" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
+                    <a title="LinkedIn" aria-label="LinkedIn" class="" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://vacxrockt.com&amp;title=How%20many%20vaccines%20could%20be%20bought%20on%20Gaza%20Strip%20instead%20of%20rockets%3F" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
                         <i class="bi bi-linkedin" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -70,8 +70,8 @@
                 <div class="card border-secundary mb-3" style="max-width: 20rem;">
                     <div class="card-header">References</div>
                     <div class="card-body">
-                        <p><small><a href="https://en.wikipedia.org/wiki/2021_Israel–Palestine_crisis">[1] 2021 Israel-Palestine crisis - Wikipedia</a></small></p>
-                        <p><small><a href="https://en.wikipedia.org/wiki/Qassam_rocket">[2] Cost of Qassam Rocket is $800</a></small></p>
+                        <p><small><a id="reference-1" href="https://en.wikipedia.org/wiki/2021_Israel–Palestine_crisis">[1] 2021 Israel-Palestine crisis - Wikipedia</a></small></p>
+                        <p><small><a id="reference-2" href="https://en.wikipedia.org/wiki/Qassam_rocket">[2] Cost of Qassam Rocket is $800</a></small></p>
                     </div>
                   </div>
                 </div>
@@ -79,7 +79,7 @@
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script language="javascript">
-        var rockets = 2300;
+        var rockets = 3100;
         var qassamPrice = 800;
 
         var vaccines = 
@@ -96,7 +96,7 @@
         var table = document.getElementById("table");
         for(var i=0; i < vaccines.length; i++)
         {
-            table.innerHTML += "<tr><td>" + vaccines[i].Brand + "</td><td><span class='px-3 text-danger'><strong>" + (Math.round(rockets * qassamPrice / vaccines[i].Price)).toLocaleString()  + "</strong></span> doses</td><td><span class='px-3 text-danger'><strong>"+vaccines[i].Price+"</strong></span> per dose</td></tr>"; 
+            table.innerHTML += "<tr><td>" + vaccines[i].Brand + "</td><td class='text-end'><span class='px-3 text-danger'><strong>" + (Math.round(rockets * qassamPrice / vaccines[i].Price)).toLocaleString()  + "</strong></span> doses</td><td class='text-end'><span class='px-3 text-danger'><strong>$"+vaccines[i].Price+"</strong></span> per dose</td></tr>"; 
         }
 
     </script>
