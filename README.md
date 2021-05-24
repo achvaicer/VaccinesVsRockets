@@ -1,7 +1,9 @@
-#Since May 10th were fired over 4360[1] rockets from Gaza into Israel.
+# Since May 10th were fired over 4360[1] rockets from Gaza into Israel.
 
-#How many vaccines could be bought instead?
+# How many vaccines could be bought instead?
 
+| Vaccine |	# of doses | value per dose |
+| ------------- |:-------------:| -----:|
 | Pfizer |	178,872 doses | $19.5 per dose |
 | Novavax | 	218,000 doses	| $16 per dose |
 | Moderna |	139,520 doses |	$25 per dose |
